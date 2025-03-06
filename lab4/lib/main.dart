@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Image.network(
-                'https://i1.photo.2gis.com/images/branch/23/3236962264622198_9580.jpg', // Замените на URL вашего изображения
+                'https://i1.photo.2gis.com/images/branch/23/3236962264622198_9580.jpg',
                 height: 200,
                 width: double.infinity,
                 fit: BoxFit.cover,
