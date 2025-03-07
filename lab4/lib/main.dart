@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(MyApp());
@@ -61,7 +62,9 @@ class MyApp extends StatelessWidget {
                           children: [
                             IconButton(
                               icon: Icon(Icons.phone, color: Colors.green),
-                              onPressed: () {},
+                              onPressed: () {
+                                launchUrl(Uri.parse('https://ya.ru/'));
+                              },
                             ),
                             Text('Позвонить'),
                           ],
@@ -71,7 +74,9 @@ class MyApp extends StatelessWidget {
                           children: [
                             IconButton(
                               icon: Icon(Icons.navigation, color: Colors.green),
-                              onPressed: () {},
+                              onPressed: () {
+                                launchUrl(Uri.parse('https://ya.ru/'));
+                              },
                             ),
                             Text('Маршрут'),
                           ],
@@ -81,7 +86,9 @@ class MyApp extends StatelessWidget {
                           children: [
                             IconButton(
                               icon: Icon(Icons.share, color: Colors.green),
-                              onPressed: () {},
+                              onPressed: () {
+                                launchUrl(Uri.parse('https://ya.ru/'));
+                              },
                             ),
                             Text('Поделиться'),
                           ],
