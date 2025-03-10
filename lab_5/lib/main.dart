@@ -12,8 +12,61 @@ class AreaCalculatorApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      home: AreaCalculatorScreen(),
     );
   }
 }
 
+class AreaCalculatorScreen extends StatefulWidget {
+  @override
+  _AreaCalculatorScreenState createState() => _AreaCalculatorScreenState();
+}
 
+class _AreaCalculatorScreenState extends State<AreaCalculatorScreen> {
+  final _formKey = GlobalKey<FormState>();
+  final _widthController = TextEditingController();
+  final _heightController = TextEditingController();
+  String _result = '';
+  bool _parametersSet = false;
+
+  void _calculateArea() {
+    if (_formKey.currentState!.validate()) {
+      double width = double.parse(_widthController.text);
+      double height = double.parse(_heightController.text);
+      double area = width * height;
+      setState(() {
+        _result = 'S = $width * $height = ${area.toStringAsFixed(2)} мм²';
+        _parametersSet = true;
+      });
+    } else {
+      setState(() {
+        _parametersSet = false;
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+            'Калькулятор площади',
+          style: TextStyle(color: Colors.white),
+        ),
+        backgroundColor: Colors.blue,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Form(
+          key: _formKey,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
