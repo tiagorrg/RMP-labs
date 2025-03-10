@@ -1,0 +1,33 @@
+# Игнорировать файлы, связанные с IDE
+.idea/
+.vscode/
+*.iml
+*.swp
+
+# Игнорировать файлы, связанные с Flutter
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+/build/
+
+# Игнорировать файлы, связанные с Dart
+.dart_tool/
+*.dart.js
+*.js
+*.js.map
+*.info.json
+
+# Игнорировать файлы, связанные с операционной системой
+.DS_Store
+Thumbs.db
+
+# Игнорировать файлы, связанные с окружением
+.env
+.env.local
+.env.development
+.env.production
+
+# Игнорировать файлы, связанные с зависимостями
+pubspec.lock
