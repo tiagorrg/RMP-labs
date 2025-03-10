@@ -98,6 +98,16 @@ class _AreaCalculatorScreenState extends State<AreaCalculatorScreen> {
                 },
               ),
               SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: _calculateArea,
+                child: Text('Вычислить',
+                  style: TextStyle(color: Colors.white),
+                ),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue,
+                  padding: const EdgeInsets.all(16.0),
+                ),
+              ),
 
             ],
           ),
