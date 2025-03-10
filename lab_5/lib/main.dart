@@ -108,7 +108,19 @@ class _AreaCalculatorScreenState extends State<AreaCalculatorScreen> {
                   padding: const EdgeInsets.all(16.0),
                 ),
               ),
-
+              SizedBox(height: 10),
+              if (!_parametersSet)
+                Text(
+                  'Задайте параметры',
+                  style: TextStyle(color: Colors.red, fontSize: 16),
+                  textAlign: TextAlign.center,
+                ),
+              if (_parametersSet && _result.isNotEmpty)
+                Text(
+                  _result,
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  textAlign: TextAlign.center,
+                ),
             ],
           ),
         ),
