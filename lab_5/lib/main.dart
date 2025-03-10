@@ -62,6 +62,42 @@ class _AreaCalculatorScreenState extends State<AreaCalculatorScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              TextFormField(
+                controller: _widthController,
+                decoration: InputDecoration(
+                  labelText: 'Ширина (мм)',
+                  border: OutlineInputBorder(),
+                ),
+                keyboardType: TextInputType.number,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Пожалуйста, введите ширину';
+                  }
+                  if (double.tryParse(value) == null) {
+                    return 'Пожалуйста, введите корректное число';
+                  }
+                  return null;
+                },
+              ),
+              SizedBox(height: 10),
+              TextFormField(
+                controller: _heightController,
+                decoration: InputDecoration(
+                  labelText: 'Высота (мм)',
+                  border: OutlineInputBorder(),
+                ),
+                keyboardType: TextInputType.number,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Задайте ширину';
+                  }
+                  if (double.tryParse(value) == null) {
+                    return 'Задайте высоту';
+                  }
+                  return null;
+                },
+              ),
+              SizedBox(height: 20),
 
             ],
           ),
